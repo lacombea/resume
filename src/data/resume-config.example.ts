@@ -31,7 +31,7 @@ export const resumeConfig: ResumeConfig = {
 
   // ===== CONTACT =====
   contact: [
-    { type: 'phone', label: '+33 7 50 26 55 85' },
+    { type: 'phone', label: '+33 7 50 26 55 65' },
     { type: 'email', label: 'lacombe.a67@gmail.com' },
     { type: 'location', label: '17 rue Desbureaux, 51100 Reims' },
     { type: 'linkedin', label: 'Lacombe-Alexia', href: 'https://www.linkedin.com/in/Lacombe-Alexia/' },
