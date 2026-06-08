@@ -18,7 +18,7 @@ export function MainContent() {
     mainTasks: resolve(labels.experience.mainTasks),
     moreTasks: resolve(labels.experience.moreTasks),
     training: labels.experience.training ? resolve(labels.experience.training) : undefined,
-    techEnv: resolve(labels.experience.techEnv),
+    techEnv: labels.experience.techEnv ? resolve(labels.experience.techEnv): undefined,
     technologies: resolve(labels.experience.technologies),
   }
 
@@ -48,6 +48,7 @@ export function MainContent() {
               key={exp.id}
               year={resolve(exp.period)}
               company={resolve(exp.company)}
+              companyUrl={exp.companyUrl} 
               type={exp.type ? resolve(exp.type) : undefined}
               role={resolve(exp.role)}
               description={resolve(exp.description)}
@@ -60,7 +61,7 @@ export function MainContent() {
                       context: resolve(exp.details.context),
                       tasks: exp.details.tasks ? resolveArray(exp.details.tasks) : undefined,
                       training: exp.details.training ? resolveArray(exp.details.training) : undefined,
-                      env: resolve(exp.details.env),
+                      env: exp.details.env ? resolve(exp.details.env) : undefined,
                     }
                   : undefined
               }
@@ -94,6 +95,7 @@ export function MainContent() {
                 techs={project.techs}
                 url={project.url}
                 github={project.github}
+                period={project.period}  // ← ajouter
               />
             ))}
           </div>

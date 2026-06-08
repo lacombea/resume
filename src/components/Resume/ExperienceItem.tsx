@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDownIcon } from '@/components/icons'
+import { ChevronDownIcon, ExternalLinkIcon, WebsiteIcon } from '@/components/icons'
 import { useBreakpoints } from '@/lib/hooks/useBreakpoints'
 import { Modal } from '@/components/ui/Modal'
 import { cn } from '@/lib/utils'
@@ -10,6 +10,7 @@ import { ExperienceDetailsContent } from './ExperienceDetails'
 interface ExperienceItemProps {
   year: string
   company: string
+  companyUrl?: string
   type?: string
   role: string
   description: string
@@ -20,14 +21,14 @@ interface ExperienceItemProps {
     context: string
     tasks?: string[]
     training?: string[]
-    env: string
+    env?: string
   }
   subItem?: { title: string; description: string }
   labels: {
     mainTasks: string
     moreTasks: string
     training?: string
-    techEnv: string
+    techEnv?: string
     technologies: string
   }
   isHighlighted?: boolean
@@ -36,6 +37,7 @@ interface ExperienceItemProps {
 export function ExperienceItem({
   year,
   company,
+  companyUrl,
   type,
   role,
   description,
@@ -93,7 +95,23 @@ export function ExperienceItem({
               </motion.div>
             )}
             <div className="flex items-center gap-2 flex-wrap pr-6 md:pr-0">
-              <h3 className="text-sm font-semibold text-resume-text">{company}</h3>
+              {companyUrl ? (
+                <div className="group/link flex items-center gap-2">
+                  <WebsiteIcon className="w-3.5 h-3.5 text-resume-primary shrink-0 group-hover/link:scale-110 transition-transform duration-200" />
+                  <a
+                    href={companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/company relative text-sm font-semibold text-resume-text hover:text-resume-primary transition-colors duration-200 inline-flex items-center gap-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-resume-primary after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  >
+                    {company}
+                    <ExternalLinkIcon className="w-3 h-3 shrink-0 text-resume-primary opacity-0 group-hover/company:opacity-100 transition-opacity duration-200" />
+                  </a>
+                  
+                </div>
+              ) : (
+                <h3 className="text-sm font-semibold text-resume-text">{company}</h3>
+              )}
               {type && (
                 <span className="text-xs px-2 py-0.5 bg-resume-primary/10 text-resume-primary rounded">
                   {type}
@@ -101,7 +119,7 @@ export function ExperienceItem({
               )}
             </div>
             <p className="text-xs text-resume-text-secondary mt-0.5">{role}</p>
-            <p className="text-xs text-resume-text-secondary/80 mt-1 line-clamp-2">{description}</p>
+            <p className="text-xs text-resume-text-secondary/80 mt-1 line-clamp-4">{description}</p>
 
             <div className="flex flex-wrap gap-1.5 mt-2">
               {techs.map((tech) => (

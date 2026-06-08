@@ -27,8 +27,6 @@ const TECH_REGISTRY = {
 
   // ===== Languages =====
   'TypeScript': { color: '#3178C6' },
-  'JavaScript': { color: '#F7DF1E' },
-  'Python': { color: '#3776AB' },
   'Java': { color: '#007396' },
   'Go': { color: '#00ADD8' },
   'Golang': { color: '#00ADD8' },
@@ -36,8 +34,6 @@ const TECH_REGISTRY = {
   'Ruby': { color: '#CC342D' },
   'PHP': { color: '#777BB4' },
   'C': { color: '#A8B9CC' },
-  'C++': { color: '#00599C' },
-  'C#': { color: '#512BD4' },
   'Swift': { color: '#F05138' },
   'Kotlin': { color: '#7F52FF' },
   'Dart': { color: '#0175C2' },
@@ -50,6 +46,34 @@ const TECH_REGISTRY = {
   'Clojure': { color: '#5881D8' },
   'Zig': { color: '#F7A41D' },
   'OCaml': { color: '#EC6813' },
+
+  // ===== Game Engines — Unity ecosystem =====
+  'Unity': { color: '#9DB3C8' },
+  'C#': { color: '#A8BFD0' },
+
+  // ===== Game Engines — Unreal ecosystem =====
+  'Unreal': { color: '#C87033' },
+  'Blueprint': { color: '#D4855A' },
+  'C++': { color: '#B86A28' },
+
+  // ===== Game Engines — Godot ecosystem =====
+  'Godot': { color: '#478CBF' },
+  'GDScript': { color: '#5FA3D4' },
+
+  // ===== Versionning =====
+  'Git': { color: '#607080' },
+  'Perforce': { color: '#6B7D8F' },
+
+  // ===== Base de données =====
+  'SQL': { color: '#4A9080' },
+  'Firebase': { color: '#3D8070' },
+  'PlayFab': { color: '#357068' },
+
+  // ===== Langages web — atténués =====
+  'JavaScript': { color: '#8B7E2A' },  // jaune désaturé
+  'HTML': { color: '#8B4A35' },        // rouge désaturé
+  'CSS': { color: '#3A5F8A' },         // bleu atténué
+  'Python': { color: '#2E5A80' },      // bleu atténué
 
   // ===== Backend Frameworks =====
   'Node.js': { color: '#339933' },
@@ -86,7 +110,6 @@ const TECH_REGISTRY = {
   'Redis': { color: '#DC382D' },
   'SQLite': { color: '#003B57' },
   'Elasticsearch': { color: '#005571' },
-  'Firebase': { color: '#FFCA28' },
   'Supabase': { color: '#3FCF8E' },
   'DynamoDB': { color: '#4053D6' },
   'MariaDB': { color: '#003545' },
@@ -120,8 +143,6 @@ const TECH_REGISTRY = {
   'Tailwind': { color: '#06B6D4' },
   'SASS': { color: '#CC6699' },
   'SCSS': { color: '#CC6699' },
-  'CSS': { color: '#1572B6' },
-  'HTML': { color: '#E34F26' },
   'Styled Components': { color: '#DB7093' },
   'Material UI': { color: '#007FFF' },
   'MUI': { color: '#007FFF' },
@@ -133,7 +154,6 @@ const TECH_REGISTRY = {
   'Framer Motion': { color: '#0055FF' },
 
   // ===== Tools & Others =====
-  'Git': { color: '#F05032' },
   'GitHub': { color: '#181717' },
   'GitLab': { color: '#FC6D26' },
   'GraphQL': { color: '#E10098' },

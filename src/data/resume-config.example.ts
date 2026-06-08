@@ -1,369 +1,333 @@
 import type { ResumeConfig } from './types'
 
-/**
- * This is an example configuration file.
- * Copy this file to `resume-config.ts` and fill in your own information.
- *
- * All text fields that support multiple languages use the `LocalizedString` format:
- * { en: "English text", fr: "Texte français" }
- *
- * Add as many languages as you need — just make sure to list them in `languages.available`.
- */
 export const resumeConfig: ResumeConfig = {
   // ===== PERSONAL INFO =====
   personal: {
-    name: 'Jane Doe',
-    // Auto-detected: just drop your photo or profile image in public/images/ (any .jpg, .png, .webp)
-    // You can also set a specific path here to override auto-detection:
+    name: 'Alexia LACOMBE',
     photo: '/images/photo.jpg',
-    photoBackEmoji: '👩‍💻', // Shown when clicking the photo (3D flip)
+    photoBackEmoji: '🥽',
     title: {
-      en: 'Fullstack Developer',
-      fr: 'Développeuse Fullstack',
+      fr: 'Ingénieure 3D / Réalité Virtuelle',
     },
     subtitle: {
-      en: '6 years of experience',
-      fr: '6 ans d\'expérience',
+      fr: 'Création d\'expériences immersives éducatives et professionnelles',
     },
-    location: 'Paris, France',
   },
 
-  // ===== SEO (used in <head> meta tags) =====
+  // ===== SEO =====
   seo: {
-    title: 'Jane Doe — Fullstack Developer',
-    description: 'Interactive resume of Jane Doe, Fullstack Developer specializing in React and TypeScript.',
+    title: 'Alexia Lacombe — Ingénieure 3D / Réalité Virtuelle',
+    description: 'CV interactif d\'Alexia Lacombe, ingénieure spécialisée en réalité virtuelle et création d\'expériences immersives éducatives et professionnelles.',
   },
 
   // ===== LANGUAGES =====
   languages: {
-    default: 'en',
-    available: ['en', 'fr'],
+    default: 'fr',
+    available: ['fr'],
     labels: {
-      en: 'EN',
       fr: 'FR',
     },
   },
 
   // ===== CONTACT =====
   contact: [
-    { type: 'github', label: 'janedoe', href: 'https://github.com/janedoe' },
-    { type: 'linkedin', label: 'Jane Doe', href: 'https://linkedin.com/in/janedoe' },
-    { type: 'email', label: 'jane@example.com' },
-    { type: 'phone', label: '+33 6 12 34 56 78' },
-    { type: 'location', label: 'Paris, France' },
+    { type: 'phone', label: '+33 7 50 26 55 85' },
+    { type: 'email', label: 'lacombe.a67@gmail.com' },
+    { type: 'location', label: '17 rue Desbureaux, 51100 Reims' },
+    { type: 'linkedin', label: 'Lacombe-Alexia', href: 'https://www.linkedin.com/in/Lacombe-Alexia/' },
+    { type: 'website', label: 'lacombea.itch.io', href: 'https://lacombea.itch.io/' },
   ],
 
   // ===== SKILLS =====
   skills: [
     {
-      title: { en: 'Languages', fr: 'Langues' },
-      type: 'languages',
-      items: [
-        { name: { en: 'French', fr: 'Français' }, level: { en: 'Native', fr: 'Natif' } },
-        { name: { en: 'English', fr: 'Anglais' }, level: { en: 'Professional', fr: 'Professionnel' }, details: 'TOEIC 910' },
-      ],
-    },
-    {
-      title: { en: 'Frontend', fr: 'Frontend' },
+      title: { fr: 'Langages' },
       type: 'badges',
       items: [
-        { name: 'React' },
-        { name: 'TypeScript' },
-        { name: 'Angular' },
-      ],
-    },
-    {
-      title: { en: 'Backend', fr: 'Backend' },
-      type: 'badges',
-      items: [
-        { name: 'Node.js' },
+        { name: 'C#' },
+        { name: 'C++' },
         { name: 'Python' },
+        { name: 'JavaScript' },
+        { name: 'HTML' },
+        { name: 'CSS' },
       ],
     },
     {
-      title: { en: 'Database', fr: 'Base de données' },
+      title: { fr: 'Moteur 3D' },
       type: 'badges',
       items: [
-        { name: 'PostgreSQL' },
-        { name: 'MongoDB' },
+        { name: 'Unity'},
+        { name: 'Unreal' },
+        { name: 'Godot' },
       ],
     },
     {
-      title: { en: 'DevOps', fr: 'DevOps' },
+      title: { fr: 'Versionning' },
       type: 'badges',
       items: [
-        { name: 'Docker' },
-        { name: 'Kubernetes' },
-        { name: 'AWS' },
-        { name: 'GitHub Actions' },
+        { name: 'Git' },
+        { name: 'Perforce' },
       ],
     },
     {
-      title: { en: 'Methodologies', fr: 'Méthodologies' },
+      title: { fr: 'Base de données' },
+      type: 'badges',
+      items: [
+        { name: 'SQL' },
+        { name: 'Firebase' },
+        { name: 'PlayFab' },
+      ],
+    },
+    {
+      title: { fr: 'Conception' },
       type: 'text',
       items: [
-        { name: { en: 'Agile/Scrum, TDD, Code Review, CI/CD', fr: 'Agile/Scrum, TDD, Code Review, CI/CD' } },
+        { name: { fr: 'Design Pattern, POO, UML, SOLID' } },
+      ],
+    },
+    {
+      title: { fr: 'Méthodologie' },
+      type: 'text',
+      items: [
+        { name: { fr: 'Agile, Scrum' } },
+      ],
+    },
+    {
+      title: { fr: 'Gestion de projet' },
+      type: 'text',
+      items: [
+        { name: { fr: 'Trello, Jira' } },
+      ],
+    },
+    {
+      title: { fr: 'Langues' },
+      type: 'languages',
+      items: [
+        { name: { fr: 'Français' }, level: { fr: ': langue maternelle' } },
+        { name: { fr: 'Anglais' }, level: { fr: ': B2 avancé' }, details: 'TOEIC 955/990' },
+        { name: { fr: 'Allemand' }, level: { fr: ': B1 intermédiaire' } },
       ],
     },
   ],
 
-  // ===== PROFESSIONAL EXPERIENCES =====
+  // ===== EXPERIENCES =====
   experiences: [
     {
-      id: 'company-a',
-      company: { en: 'TechCorp', fr: 'TechCorp' },
-      role: { en: 'Senior Fullstack Developer', fr: 'Développeuse Fullstack Senior' },
-      type: { en: 'Permanent', fr: 'CDI' },
-      period: { en: '2022 - Present', fr: '2022 - Présent' },
+      id: 'cesi',
+      company: { fr: 'CESI' },
+      role: { fr: 'Formateur externe' },
+      type: { fr: 'Temps partiel' },
+      period: { fr: 'Depuis sept. 2025' },
       description: {
-        en: 'Led the development of a SaaS platform used by 10k+ users. Built microservices architecture and modern React frontend.',
-        fr: 'Direction du développement d\'une plateforme SaaS utilisée par 10k+ utilisateurs. Architecture microservices et frontend React moderne.',
+        fr: 'Conception et animation de cours et TD en mathématiques (matrices) et informatique (RIA 2D/3D) — publics étudiants et reconversion.',
       },
-      techs: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+      techs: ['JavaScript', 'C#'],
+    },
+    {
+      id: 'urca',
+      companyUrl: 'https://www.univ-reims.fr/demetere/',
+      company: { fr: 'URCA DeMETeRe' },
+      role: { fr: 'Ingénieure en réalité virtuelle' },
+      type: { fr: 'CDI' },
+      period: { fr: 'Depuis juil. 2024' },
+      description: {
+        fr: 'Développement de simulateurs pédagogiques VR industriels et référente technique sur deux projets partenaires en santé et maintenance.',
+      },
+      techs: ['Godot', 'GDScript'],
       isHighlighted: true,
       details: {
         context: {
-          en: 'Team of 8 developers within a 50-person product company. Agile/Scrum methodology with 2-week sprints, CI/CD pipeline with GitHub Actions, code reviews on every PR.',
-          fr: 'Équipe de 8 développeurs au sein d\'une société produit de 50 personnes. Méthodologie Agile/Scrum avec sprints de 2 semaines, pipeline CI/CD avec GitHub Actions, code review sur chaque PR.',
+          fr: 'Projet ANR France 2030 — équipe pluridisciplinaire de 3 personnes (ingénierie pédagogique, graphisme, expertise métier). Deux projets partenaires menés en parallèle du développement interne.',
         },
         tasks: {
-          en: [
-            'Designed and implemented the frontend architecture (monorepo, shared component library)',
-            'Built a real-time notification system using WebSockets and Redis pub/sub',
-            'Migrated legacy codebase from JavaScript to TypeScript (200+ files)',
-            'Implemented role-based access control (RBAC) across the entire platform',
-            'Set up automated testing with 85% code coverage (unit, integration, E2E)',
-            'Led the migration from REST to GraphQL for the main API',
-            'Built a dashboard analytics module with interactive charts and export features',
-            'Mentored 3 junior developers through pair programming and weekly 1-on-1s',
-          ],
           fr: [
-            'Conception et implémentation de l\'architecture frontend (monorepo, bibliothèque de composants partagés)',
-            'Création d\'un système de notifications temps réel via WebSockets et Redis pub/sub',
-            'Migration du code legacy de JavaScript vers TypeScript (200+ fichiers)',
-            'Implémentation d\'un contrôle d\'accès basé sur les rôles (RBAC) sur toute la plateforme',
-            'Mise en place de tests automatisés avec 85% de couverture (unitaires, intégration, E2E)',
-            'Pilotage de la migration de REST vers GraphQL pour l\'API principale',
-            'Développement d\'un module de tableau de bord analytique avec graphiques interactifs et export',
-            'Mentorat de 3 développeurs juniors via pair programming et 1-on-1 hebdomadaires',
-          ],
-        },
-        training: {
-          en: [
-            'AWS Solutions Architect certification',
-            'Internal training on Kubernetes orchestration',
-          ],
-          fr: [
-            'Certification AWS Solutions Architect',
-            'Formation interne sur l\'orchestration Kubernetes',
+            'Développement d\'un simulateur de formation à l\'analyse vibratoire : placement de capteurs, paramétrisation des mesures et chasse aux risques en environnement VR.',
+            'Développement d\'un simulateur de découverte de machine industrielle : exploration en vue éclatée et suivi de la progression des apprenants.',
+            'Référente technique sur deux projets partenaires : validation et cohérence technico-pédagogique d\'un simulateur de communication en santé par IA et d\'un simulateur de maintenance industrielle.',
+            'Déploiement des simulateurs auprès des parties prenantes, présentations sur salons (Foire de Châlons-en-Champagne, visites de collèges) et enrichissement continu du contenu.',
           ],
         },
         env: {
-          en: 'React / TypeScript / Node.js / PostgreSQL / GraphQL / Redis / Docker / AWS / GitHub Actions / Datadog',
-          fr: 'React / TypeScript / Node.js / PostgreSQL / GraphQL / Redis / Docker / AWS / GitHub Actions / Datadog',
+          fr: 'Godot 4 / GDScript / XR Tools / Git / Pico 4 / Meta Quest 3',
         },
       },
     },
     {
-      id: 'company-b',
-      company: { en: 'WebAgency', fr: 'WebAgency' },
-      role: { en: 'Frontend Developer', fr: 'Développeuse Frontend' },
-      type: { en: 'Permanent', fr: 'CDI' },
-      period: { en: '2019 - 2022', fr: '2019 - 2022' },
+      id: 'uqac-dev',
+      company: { fr: 'UQAC' },
+      companyUrl: 'https://www.uqac.ca/cogni-actif/',
+      role: { fr: 'Développeuse de jeux sérieux' },
+      type: { fr: 'CDD' },
+      period: { fr: 'Mai 2023 – Juin 2024' },
       description: {
-        en: 'Developed responsive web applications for various clients. Specialized in React and Angular projects.',
-        fr: 'Développement d\'applications web responsives pour divers clients. Spécialisée en projets React et Angular.',
+        fr: 'Développement gameplay, UI et base de données en ligne (PlayFab) pour Cogni-Actif, jeu sérieux d\'apprentissage physiquement actif — équipe de 2 développeurs, en collaboration avec une kinésiologue.',
       },
-      techs: ['React', 'Angular', 'TypeScript', 'SCSS'],
+      techs: ['C#', 'Unity', 'PlayFab'],
+      isHighlighted: true,
       details: {
         context: {
-          en: 'Digital agency with 20+ clients across various industries (retail, finance, healthcare). Team of 12 developers, working on 3-4 projects simultaneously.',
-          fr: 'Agence digitale avec 20+ clients dans différents secteurs (retail, finance, santé). Équipe de 12 développeurs, travaillant sur 3-4 projets simultanément.',
+          fr: 'Projet de recherche UQAC — jeu sérieux destiné aux écoles primaires du Québec. Équipe de 2 développeurs en collaboration avec une kinésiologue pour l\'expertise métier.',
         },
         tasks: {
-          en: [
-            'Built 15+ client-facing web applications from scratch',
-            'Created and maintained a shared design system used across all agency projects',
-            'Implemented complex form workflows with multi-step validation',
-            'Optimized web performance achieving 90+ scores on Core Web Vitals',
-            'Integrated third-party APIs (payment, CRM, analytics)',
-            'Set up Storybook documentation for reusable components',
-            'Collaborated closely with UX designers to translate Figma mockups into pixel-perfect UIs',
-          ],
           fr: [
-            'Développement de 15+ applications web clients from scratch',
-            'Création et maintenance d\'un design system partagé utilisé sur tous les projets de l\'agence',
-            'Implémentation de workflows de formulaires complexes avec validation multi-étapes',
-            'Optimisation des performances web avec scores 90+ sur les Core Web Vitals',
-            'Intégration d\'APIs tierces (paiement, CRM, analytics)',
-            'Mise en place de la documentation Storybook pour les composants réutilisables',
-            'Collaboration étroite avec les designers UX pour traduire les maquettes Figma en interfaces pixel-perfect',
-          ],
-        },
-        training: {
-          en: [
-            'Angular Advanced workshop (2 days)',
-            'Accessibility (WCAG 2.1) certification',
-          ],
-          fr: [
-            'Workshop Angular Avancé (2 jours)',
-            'Certification Accessibilité (WCAG 2.1)',
+            'Développement du système d\'activité physique : minutage haute/basse intensité, synchronisation des animations et intégration des questions pédagogiques (mathématiques, français).',
+            'Intégration et automatisation de l\'import des contenus pédagogiques, paramètres de jeu et gestion audio (playlists, effets sonores).',
+            'Intégration de PlayFab pour la sauvegarde et le suivi de la progression des élèves en temps réel.',
+            'Conception et mise en place de protocoles de tests utilisateurs dans 4 classes (~120 élèves) pour itérer sur l\'expérience de jeu.',
           ],
         },
         env: {
-          en: 'React / Angular / TypeScript / SCSS / Tailwind CSS / Storybook / Figma / GitLab CI',
-          fr: 'React / Angular / TypeScript / SCSS / Tailwind CSS / Storybook / Figma / GitLab CI',
+          fr: 'Unity / C# / PlayFab / Git',
         },
       },
     },
     {
-      id: 'internship',
-      company: { en: 'StartupXYZ', fr: 'StartupXYZ' },
-      role: { en: 'Fullstack Developer Intern', fr: 'Stagiaire Développeuse Fullstack' },
-      type: { en: 'Internship', fr: 'Stage' },
-      period: { en: '2018 - 2019', fr: '2018 - 2019' },
+      id: 'uqac-pedagogy',
+      company: { fr: 'UQAC' },
+      role: { fr: 'Aide pédagogique' },
+      type: { fr: 'Temps partiel' },
+      period: { fr: 'Sept. 2022 – Avr. 2024' },
       description: {
-        en: 'Contributed to the development of an e-commerce platform. Gained experience in fullstack development.',
-        fr: 'Contribution au développement d\'une plateforme e-commerce. Acquisition d\'expérience en développement fullstack.',
+        fr: 'Encadrement de TD de mathématiques et programmation (bac informatique et génie) — suivi, accompagnement et correction.',
       },
-      techs: ['React', 'Node.js', 'MongoDB', 'Machine Learning'],
+      techs: ['C++'],
+    },
+    {
+      id: 'emanrisk',
+      company: { fr: 'e-ManRisk (groupe E.Leclerc)' },
+      role: { fr: 'Assistante ingénieure en réalité virtuelle' },
+      type: { fr: 'Stage' },
+      period: { fr: 'Févr. – Juin 2022' },
+      description: {
+        fr: 'Développement d\'un POC VR de formation aux procédures de traçabilité et d\'hygiène alimentaire.',
+      },
+      techs: ['Unity', 'C#', 'JavaScript', 'Git'],
       details: {
         context: {
-          en: 'Early-stage startup (seed round), small team of 5 developers building an e-commerce platform from the ground up. Fast-paced environment with weekly releases.',
-          fr: 'Startup en phase de démarrage (seed round), petite équipe de 5 développeurs construisant une plateforme e-commerce from scratch. Environnement rapide avec des releases hebdomadaires.',
+          fr: 'Filiale du groupe E.Leclerc. Collaboration avec le CERV (Centre Européen de Réalité Virtuelle) pour l\'intégration du système Mascaret.',
         },
         tasks: {
-          en: [
-            'Developed the product catalog with advanced filtering and search',
-            'Built the shopping cart with real-time inventory checking',
-            'Integrated Stripe payment gateway with 3D Secure support',
-            'Implemented user authentication with JWT and OAuth (Google, Facebook)',
-            'Created an admin dashboard for order management and analytics',
-            'Wrote API documentation with Swagger/OpenAPI',
-          ],
           fr: [
-            'Développement du catalogue produits avec filtrage avancé et recherche',
-            'Création du panier d\'achat avec vérification de stock en temps réel',
-            'Intégration de la passerelle de paiement Stripe avec support 3D Secure',
-            'Implémentation de l\'authentification utilisateur avec JWT et OAuth (Google, Facebook)',
-            'Création d\'un tableau de bord admin pour la gestion des commandes et les analytics',
-            'Rédaction de la documentation API avec Swagger/OpenAPI',
+            'Modélisation d\'un environnement VR et développement d\'un scénario de formation initiale aux procédures d\'hygiène alimentaire (cuisson, refroidissement, stockage).',
+            'Intégration du logiciel métier e-ManRisk dans l\'environnement 3D via une tablette interactive pilotée par Puppeteer.',
           ],
         },
         env: {
-          en: 'React / Node.js / Express / MongoDB / Stripe / JWT / Docker / Heroku',
-          fr: 'React / Node.js / Express / MongoDB / Stripe / JWT / Docker / Heroku',
+          fr: 'Unity / C# / SteamVR / Oculus Quest / Puppeteer / TypeScript / Git',
         },
       },
     },
   ],
 
-  // ===== PROJECTS (optional) =====
+  // ===== PROJECTS =====
   projects: [
     {
-      id: 'project-a',
-      title: { en: 'WeatherApp', fr: 'WeatherApp' },
+      id: 'sensory-awakening',
+      title: { fr: 'The Sensory Awakening' },
       description: {
-        en: 'A real-time weather dashboard built with React and OpenWeather API.',
-        fr: 'Un tableau de bord météo en temps réel construit avec React et l\'API OpenWeather.',
+        fr: 'Jeu narratif 3D sur le thème "Limited resources" — Dev at Ubisoft.',
       },
-      techs: ['React', 'TypeScript'],
-      url: 'https://weather-app.example.com',
-      github: 'https://github.com/janedoe/weather-app',
+      techs: ['Unreal', 'Blueprint'],
     },
     {
-      id: 'project-b',
-      title: { en: 'TaskManager', fr: 'TaskManager' },
+      id: 'between-the-lines',
+      title: { fr: 'Between the Lines' },
       description: {
-        en: 'A Kanban-style task management tool with drag-and-drop.',
-        fr: 'Un outil de gestion de tâches style Kanban avec glisser-déposer.',
+        fr: 'Jeu narratif 2D explorant l\'identité et l\'adaptation sociale — Game Jam des Audacieux.ses, équipe de 5.',
       },
-      techs: ['React', 'Node.js', 'PostgreSQL'],
-      github: 'https://github.com/janedoe/task-manager',
+      techs: ['C#', 'Unity'],
+      url: 'https://mayzhy.itch.io/between-the-lines',
+    },
+    {
+      id: 'hotato-party',
+      title: { fr: 'Hotato Party' },
+      description: {
+        fr: 'Jeu mobile de soirée multijoueur local — 1er prix de la Wonder Jam UQAC, développé en 48h en équipe de 2.',
+      },
+      techs: ['C#', 'Unity'],
+      url: 'https://lacombea.itch.io/hotatoparty',
+    },
+    {
+      id: 'flickering-shadows',
+      title: { fr: 'Flickering Shadows' },
+      description: {
+        fr: 'Jeu d\'arcade 3D à la troisième personne — programmation IA ennemis. Projet scolaire UQAC, équipe de 4.',
+      },
+      techs: ['C#', 'Unity'],
+      url: 'https://lacombea.itch.io/flickering-shadows',
+    },
+    {
+      id: 'chromascore',
+      title: { fr: 'ChromaScore' },
+      description: {
+        fr: 'Jeu de rythme arcade — Coding Blocks Game Jam 2023, développé en 72h en équipe de 5.',
+      },
+      techs: ['C#', 'Unity'],
+      url: 'https://eddiebreeg.itch.io/chromascore',
     },
   ],
 
   // ===== EDUCATION =====
   education: [
     {
-      school: { en: 'University of Paris', fr: 'Université de Paris' },
-      degree: { en: 'Master in Computer Science', fr: 'Master Informatique' },
-      specialty: { en: 'Web & Mobile Development', fr: 'Développement Web & Mobile' },
-      period: '2017 - 2019',
+      school: { fr: 'UQAC' },
+      degree: { fr: 'Maîtrise en informatique (jeux vidéo)' },
+      specialty: {
+        fr: 'Principes de conception et de développement de jeux vidéo • Interaction 3D et réalité virtuelle • Jeux sérieux • Principes des moteurs de jeux • Programmation réseau dans les jeux vidéo • Fondamentaux de l\'apprentissage automatique • IA pour le jeu vidéo • Programmation de plateformes mobiles',
+      },
+      period: 'Sept. 2022 – Jan. 2024',
     },
     {
-      school: { en: 'University of Paris', fr: 'Université de Paris' },
-      degree: { en: 'Bachelor in Computer Science', fr: 'Licence Informatique' },
-      period: '2014 - 2017',
+      school: { fr: 'ENIB' },
+      degree: { fr: 'Diplôme d\'ingénieur généraliste' },
+      period: 'Sept. 2018 – Jan. 2024',
+    },
+    {
+      school: { fr: 'IAE Brest' },
+      degree: { fr: 'Diplôme Universitaire Entrepreneuriat' },
+      period: '2021',
     },
   ],
 
-  // ===== HOBBIES (optional) =====
+  // ===== HOBBIES =====
   hobbies: [
     {
-      title: { en: 'Photography', fr: 'Photographie' },
+      title: { fr: 'Sports' },
       details: [
-        { en: 'Street photography', fr: 'Photo de rue' },
-        { en: '5 years', fr: '5 ans' },
+        { fr: 'Course à pied, Hyrox' },
+        { fr: 'Escalade' },
       ],
     },
     {
-      title: { en: 'Hiking', fr: 'Randonnée' },
-      details: [
-        { en: 'Mountain trails', fr: 'Sentiers de montagne' },
-      ],
-    },
-    {
-      title: { en: 'Open Source', fr: 'Open Source' },
-    },
-    {
-      title: { en: 'Guitar', fr: 'Guitare' },
-      details: [
-        { en: '3 years', fr: '3 ans' },
-      ],
+      title: { fr: 'Jeux de société' },
     },
   ],
-
-  // ===== PDF (optional) =====
-  // Auto-detected: just drop your PDF files in public/cv/fr/ and public/cv/en/
-  // The download button will appear automatically — no config needed!
-  // Uncomment below only if you need to override the auto-detection:
-  // pdf: {
-  //   label: { en: 'Download PDF', fr: 'Télécharger le PDF' },
-  //   path: { en: '/cv/en/resume-en.pdf', fr: '/cv/fr/resume-fr.pdf' },
-  // },
 
   // ===== THEME =====
   theme: {
-    preset: 'warm', // 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'lilac'
-    // You can override individual colors:
-    // colors: {
-    //   primary: '#8B5A2B',
-    //   primaryLight: '#D4A574',
-    // },
+    preset: 'ocean',
   },
 
   // ===== UI LABELS =====
   labels: {
     sections: {
-      contact: { en: 'CONTACT', fr: 'CONTACT' },
-      skills: { en: 'SKILLS', fr: 'COMPÉTENCES' },
-      experience: { en: 'PROFESSIONAL EXPERIENCE', fr: 'EXPÉRIENCES PROFESSIONNELLES' },
-      education: { en: 'EDUCATION', fr: 'FORMATION' },
-      projects: { en: 'PROJECTS', fr: 'PROJETS' },
-      hobbies: { en: 'HOBBIES', fr: 'LOISIRS' },
+      contact: { fr: 'CONTACT' },
+      skills: { fr: 'COMPÉTENCES' },
+      experience: { fr: 'EXPÉRIENCES PROFESSIONNELLES' },
+      education: { fr: 'FORMATIONS' },
+      projects: { fr: 'AUTRES PROJETS' },
+      hobbies: { fr: 'CENTRE D\'INTÉRÊTs' },
     },
     experience: {
-      mainTasks: { en: 'Main tasks:', fr: 'Tâches principales :' },
-      moreTasks: { en: 'more tasks...', fr: 'autres tâches...' },
-      training: { en: 'Training:', fr: 'Formations :' },
-      techEnv: { en: 'Tech environment:', fr: 'Env. technique :' },
-      technologies: { en: 'Technologies', fr: 'Technologies' },
+      mainTasks: { fr: 'Missions :' },
+      moreTasks: { fr: 'autres missions…' },
+      techEnv: { fr: 'Env. technique :' },
+      technologies: { fr: 'Technologies' },
     },
     actions: {
-      clickHint: { en: 'Click on experiences to see more details', fr: 'Cliquez sur les expériences pour voir plus de détails' },
-      switchTheme: { en: 'Toggle dark mode', fr: 'Changer le thème' },
-      downloadPdf: { en: 'Download PDF', fr: 'Télécharger le PDF' },
+      clickHint: { fr: 'Cliquez sur une expérience pour voir les détails' },
+      switchTheme: { fr: 'Changer le thème' },
+      downloadPdf: { fr: 'Télécharger le PDF' },
     },
   },
 }

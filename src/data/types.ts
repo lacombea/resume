@@ -36,6 +36,7 @@ import type { TechName } from './tech-registry'
 export interface Experience {
   id: string
   company: LocalizedString
+  companyUrl?: string
   role: LocalizedString
   type?: LocalizedString
   period: LocalizedString
@@ -50,7 +51,7 @@ export interface Experience {
     context: LocalizedString
     tasks?: LocalizedStringArray
     training?: LocalizedStringArray
-    env: LocalizedString
+    env?: LocalizedString
   }
 }
 
@@ -63,6 +64,7 @@ export interface Project {
   techs: (TechName | (string & {}))[]
   url?: string
   github?: string
+  period?: string  
 }
 
 // ===== EDUCATION =====
@@ -120,7 +122,7 @@ export interface ResumeLabels {
     mainTasks: LocalizedString
     moreTasks: LocalizedString
     training?: LocalizedString
-    techEnv: LocalizedString
+    techEnv?: LocalizedString
     technologies: LocalizedString
   }
   actions: {

@@ -26,7 +26,7 @@ Add as many languages as you need. Just make sure each language code is also lis
 
 ```typescript
 personal: {
-  name: 'Jane Doe',
+  name: 'Alexia Lacombe',
   photo: '/images/photo.jpg',      // Place in public/images/
   photoBackEmoji: '👩‍💻',            // Shown on photo flip
   title: { en: 'Developer', fr: 'Developpeur' },

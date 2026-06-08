@@ -4,14 +4,14 @@ interface ExperienceDetailsContentProps {
   context: string
   tasks?: string[]
   training?: string[]
-  env: string
+  env?: string
   techs?: string[]
   description?: string
   labels: {
     mainTasks: string
     moreTasks: string
     training?: string
-    techEnv: string
+    techEnv?: string
     technologies: string
   }
   variant: 'inline' | 'modal'
@@ -27,7 +27,7 @@ export function ExperienceDetailsContent({
   labels,
   variant,
 }: ExperienceDetailsContentProps) {
-  const MAX_INLINE_TASKS = 6
+  const MAX_INLINE_TASKS = 10
 
   return (
     <div className="space-y-3">
@@ -83,11 +83,13 @@ export function ExperienceDetailsContent({
         </div>
       )}
 
-      <div className={variant === 'modal' ? 'pt-3 border-t border-resume-primary/20' : ''}>
-        <p className="text-xs text-resume-primary">
-          <span className="font-semibold">{labels.techEnv}</span> {env}
-        </p>
-      </div>
+      {env && (
+        <div className={variant === 'modal' ? 'pt-3 border-t border-resume-primary/20' : ''}>
+          <p className="text-xs text-resume-primary">
+            <span className="font-semibold">{labels.techEnv}</span> {env}
+          </p>
+        </div>
+      )}
     </div>
   )
 }
