@@ -9,7 +9,7 @@ interface ProjectItemProps {
   period?: string
 }
 
-export function ProjectItem({ title, description, techs, url, github, period }: ProjectItemProps) {
+export function ProjectItem({ title, description, techs, url, period }: ProjectItemProps) {
   return (
     <div className="flex items-start gap-4 py-3 px-3 -mx-3 rounded-lg hover:bg-resume-primary/5 transition-colors">
       {period && (
