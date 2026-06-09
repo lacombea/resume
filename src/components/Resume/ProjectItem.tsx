@@ -1,12 +1,11 @@
 import { TechBadge } from './TechBadge'
-import { ExternalLinkIcon, GitHubIcon, WebsiteIcon } from '@/components/icons'
+import { ExternalLinkIcon, WebsiteIcon } from '@/components/icons'
 
 interface ProjectItemProps {
   title: string
   description: string
   techs: string[]
   url?: string
-  github?: string
   period?: string
 }
 
