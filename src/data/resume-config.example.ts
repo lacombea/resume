@@ -228,6 +228,7 @@ export const resumeConfig: ResumeConfig = {
         fr: 'Jeu narratif 3D sur le thème "Limited resources" — Dev at Ubisoft.',
       },
       techs: ['Unreal', 'Blueprint'],
+      url: 'https://lacombea.itch.io/the-sensory-awakening',
     },
     {
       id: 'between-the-lines',
@@ -291,16 +292,7 @@ export const resumeConfig: ResumeConfig = {
 
   // ===== HOBBIES =====
   hobbies: [
-    {
-      title: { fr: 'Sports' },
-      details: [
-        { fr: 'Course à pied, Hyrox' },
-        { fr: 'Escalade' },
-      ],
-    },
-    {
-      title: { fr: 'Jeux de société' },
-    },
+      
   ],
 
   // ===== THEME =====
@@ -316,7 +308,7 @@ export const resumeConfig: ResumeConfig = {
       experience: { fr: 'EXPÉRIENCES PROFESSIONNELLES' },
       education: { fr: 'FORMATIONS' },
       projects: { fr: 'AUTRES PROJETS' },
-      hobbies: { fr: 'CENTRE D\'INTÉRÊTs' },
+      hobbies: { fr: 'CENTRE D\'INTÉRÊTS' },
     },
     experience: {
       mainTasks: { fr: 'Missions :' },

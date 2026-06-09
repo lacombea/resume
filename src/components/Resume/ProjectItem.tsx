@@ -1,5 +1,5 @@
 import { TechBadge } from './TechBadge'
-import { ExternalLinkIcon, GitHubIcon } from '@/components/icons'
+import { ExternalLinkIcon, GitHubIcon, WebsiteIcon } from '@/components/icons'
 
 interface ProjectItemProps {
   title: string
@@ -21,22 +21,20 @@ export function ProjectItem({ title, description, techs, url, github, period }: 
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1">
           {url ? (
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/project relative text-sm font-semibold text-resume-text hover:text-resume-primary transition-colors duration-200 inline-flex items-center gap-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-resume-primary after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
-            >
-              {title}
-              <ExternalLinkIcon className="w-3 h-3 shrink-0 text-resume-primary opacity-0 group-hover/project:opacity-100 transition-opacity duration-200" />
-            </a>
+            <div className="group/link flex items-center gap-2">
+              <WebsiteIcon className="w-3.5 h-3.5 text-resume-primary shrink-0" />
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/project relative text-sm font-semibold text-resume-text hover:text-resume-primary transition-colors duration-200 inline-flex items-center gap-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-resume-primary after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+              >
+                {title}
+                <ExternalLinkIcon className="w-3 h-3 shrink-0 text-resume-primary opacity-0 group-hover/project:opacity-100 transition-opacity duration-200" />
+              </a>
+            </div>
           ) : (
             <h3 className="text-sm font-semibold text-resume-text">{title}</h3>
-          )}
-          {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer" aria-label={`${title} on GitHub`}>
-              <GitHubIcon className="w-3.5 h-3.5 text-resume-primary" />
-            </a>
           )}
         </div>
         <p className="text-xs text-resume-text-secondary mb-2">{description}</p>
