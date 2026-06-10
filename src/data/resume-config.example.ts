@@ -225,7 +225,7 @@ export const resumeConfig: ResumeConfig = {
       id: 'sensory-awakening',
       title: { fr: 'The Sensory Awakening' },
       description: {
-        fr: 'Jeu narratif 3D sur le thème "Limited resources" — Dev at Ubisoft.',
+        fr: 'Jeu narratif 3D solo sur l\'éveil des sens — prototype jouable développé en solo sur Unreal dans le cadre du programme de mentoring Dev at Ubisoft.',
       },
       techs: ['Unreal', 'Blueprint'],
       url: 'https://lacombea.itch.io/the-sensory-awakening',
@@ -234,7 +234,7 @@ export const resumeConfig: ResumeConfig = {
       id: 'between-the-lines',
       title: { fr: 'Between the Lines' },
       description: {
-        fr: 'Jeu narratif 2D explorant l\'identité et l\'adaptation sociale — Game Jam des Audacieux.ses, équipe de 5.',
+        fr: 'Jeu narratif 2D explorant l\'identité et l\'adaptation sociale — seule programmeuse au sein d\'une équipe de 5, Game Jam des Audacieux.ses.',
       },
       techs: ['C#', 'Unity'],
       url: 'https://mayzhy.itch.io/between-the-lines',
@@ -252,7 +252,7 @@ export const resumeConfig: ResumeConfig = {
       id: 'flickering-shadows',
       title: { fr: 'Flickering Shadows' },
       description: {
-        fr: 'Jeu d\'arcade 3D à la troisième personne — programmation IA ennemis. Projet scolaire UQAC, équipe de 4.',
+        fr: 'Jeu d\'arcade 3D — programmation IA : apparition, comportement et disparition des monstres selon la proximité du joueur. Projet scolaire UQAC, équipe de 4.',
       },
       techs: ['C#', 'Unity'],
       url: 'https://lacombea.itch.io/flickering-shadows',
@@ -261,7 +261,7 @@ export const resumeConfig: ResumeConfig = {
       id: 'chromascore',
       title: { fr: 'ChromaScore' },
       description: {
-        fr: 'Jeu de rythme arcade — Coding Blocks Game Jam 2023, développé en 72h en équipe de 5.',
+        fr: 'Jeu de rythme arcade — UI et système de sauvegarde, premier rhythm game pour toute l\'équipe, développé en 72h en équipe de 5. Coding Blocks Game Jam 2023.',
       },
       techs: ['C#', 'Unity'],
       url: 'https://eddiebreeg.itch.io/chromascore',
