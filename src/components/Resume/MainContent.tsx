@@ -94,7 +94,6 @@ export function MainContent() {
                 description={resolve(project.description)}
                 techs={project.techs}
                 url={project.url}
-                github={project.github}
                 period={project.period}  // ← ajouter
               />
             ))}
