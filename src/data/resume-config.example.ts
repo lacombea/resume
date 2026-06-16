@@ -128,7 +128,7 @@ export const resumeConfig: ResumeConfig = {
       companyUrl: 'https://www.univ-reims.fr/demetere/',
       company: { fr: 'URCA DeMETeRe' },
       role: { fr: 'Ingénieure en réalité virtuelle' },
-      type: { fr: 'CDI' },
+      type: { fr: 'CDD' },
       period: { fr: 'Depuis juil. 2024' },
       description: {
         fr: 'Développement de simulateurs pédagogiques VR industriels et référente technique sur deux projets partenaires en santé et maintenance.',
